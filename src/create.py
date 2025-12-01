@@ -13,22 +13,27 @@ ocean_percentage = random.uniform(0.45, 0.7)
 sum_percentage = 0
 list_continent_percentage = []
 for continent in range (first_world.number_children):
-    if sum_percentage >= 1:
-        #del the last continent percentage (which made the sum > 1)
-        del list_continent_percentage[-1]
-        #re calculate the last continent percentage
-        continent_percentage = 1 - sum_percentage
+    if continent == first_world.number_children - 1:
+        continent_percentage = 1.0 - sum_percentage
+        if continent_percentage < 0: 
+            continent_percentage = 0
         list_continent_percentage.append(continent_percentage)
-        break
+        sum_percentage += continent_percentage
     else:
-        if continent == first_world.number_children - 1:
-            continent_percentage = 1 - sum_percentage
-        else:
-            continent_percentage = random.uniform(0.1, 0.3)
+        continent_percentage = random.uniform(0.1, 0.27)
+        if sum_percentage + continent_percentage > 1.0:
+            continent_percentage = 1.0 - sum_percentage
+            list_continent_percentage.append(continent_percentage)
             sum_percentage += continent_percentage
-        list_continent_percentage.append(continent_percentage)
+            break
+        else:
+            list_continent_percentage.append(continent_percentage)
+            sum_percentage += continent_percentage
+        
+#add continents to the world
+for i in list_continent_percentage:
+    print(i)
 
 
 FIRST_CONTINENT = Continent("The Dark", 12742, "Equator", "The first continent")
 first_world.add_children(FIRST_CONTINENT)
-print(f"World: {first_world.name}, The First Continent: {first_world.children[0].name}")
