@@ -1,4 +1,4 @@
-from world.base import Base
+from base import Base
 import random
 
 class Ocean(Base):

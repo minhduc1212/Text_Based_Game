@@ -1,4 +1,4 @@
-from world.base import Base
+from base import Base
 
 class Continent(Base):
     def __init__(self, name, size, location, description):

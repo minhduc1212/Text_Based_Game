@@ -1,5 +1,5 @@
-from world.continent import Continent
-from world.world import World
+from continent import Continent
+from world import World
 import random
 
 #create the world
