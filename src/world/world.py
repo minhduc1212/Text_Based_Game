@@ -1,4 +1,4 @@
-from base import Base
+from .base import Base
 import random
 
 class World(Base):
