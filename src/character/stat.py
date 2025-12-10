@@ -1,4 +1,4 @@
-class stat:
+class base_stat:
     #constuctor
     def __init__(self, name: str, value: int):
         self.name = name
@@ -19,3 +19,10 @@ class stat:
 
     def set_value(self, value: int):
         self.value = value
+
+"""
+Stat:   Strength (Sức Mạnh)
+        Dexterity (Linh Hoạt)
+        Mind or Intelligent
+
+"""
