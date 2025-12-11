@@ -1,0 +1,9 @@
+{
+    "Swordman": {
+        "Strength": 15,
+        "Dexterity": 10,
+        "Intelligence": 5,
+        "Vitality": 12,
+        "Luck": 8
+    }
+}
