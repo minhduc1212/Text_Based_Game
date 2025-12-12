@@ -25,13 +25,6 @@ class BaseStat:
     def __str__(self):
         return f"{self.name}: {self.value}"
 
-    #setter and getter
-    def get_value(self):
-        return self.value
-
-    def set_value(self, value: int):
-        self.value = value
-
 """
 Stat:   Strength (Sức Mạnh)
         Dexterity (Linh Hoạt)
