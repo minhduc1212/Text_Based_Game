@@ -1,0 +1,3 @@
+player được chọn class với nhưungx chỉ số được tự ý tùy chỉnh nhưng chỉ trong khoảng cho phép của class đó, mỗi class sẽ có đặc điểm riêng
+
+taoj ra flow cua game de de lap trinh hon

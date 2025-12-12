@@ -1,4 +1,4 @@
 from src.world.create import create_world
-from src.statistics.create import create_character
+from src.player.main_player import create_player
 
-create_character()
+create_player("Non", "None")
