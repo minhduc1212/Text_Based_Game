@@ -1,0 +1,16 @@
+{   
+    "None": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Vitality": 10,
+        "Luck": 10
+    },
+    "Swordman": {
+        "Strength": 15,
+        "Dexterity": 10,
+        "Intelligence": 5,
+        "Vitality": 12,
+        "Luck": 8
+    }
+}

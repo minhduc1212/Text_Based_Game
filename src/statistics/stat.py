@@ -2,7 +2,7 @@ import json
 import os
 
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
-JSON_PATH = os.path.join(BASE_PATH, "start_stat.json")
+JSON_PATH = os.path.join(BASE_PATH, "base_stat.json")
 
 def get_stat(name: str, hero_class: str):
     with open(JSON_PATH, "r") as f:
@@ -35,6 +35,20 @@ class Strength(BaseStat):
         value = get_stat("Strength", hero_class)
         super().__init__("Strength", value)
         self.hero_class = hero_class
+        
+class Dexterity(BaseStat):
+    def __init__(self, hero_class: str):
+        value = get_stat("Dexterity", hero_class)
+        super().__init__("Dexterity", value)
+        self.hero_class = hero_class
+
+class Intelligence(BaseStat):
+    def __init__(self, hero_class: str):
+        value = get_stat("Intelligence", hero_class)
+        super().__init__("Intelligence", value)
+        self.hero_class = hero_class
+
+
 
 
     
