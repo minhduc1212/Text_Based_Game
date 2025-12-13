@@ -1,11 +1,9 @@
 import json
 import os
 
-BASE_PATH = os.path.dirname(os.path.abspath(__file__))
-JSON_PATH = os.path.join(BASE_PATH, "base_stat.json")
 
 def get_stat(name: str, hero_class: str):
-    with open(JSON_PATH, "r") as f:
+    with open("data/base_stat.json", "r") as f:
         data = json.load(f)
     return data[hero_class][name] 
 
