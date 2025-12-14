@@ -1,6 +1,7 @@
 {
     "name": "Non",
     "class": "None",
+    "hp": 100,
     "stat": {
         "strength": 10,
         "dexterity": 10,

@@ -9,6 +9,7 @@ def create_player(name: str, hero_class: str):
     main_player = {
         "name": name,
         "class": hero_class,
+        "hp": 100,
         "stat": {
             "strength": strength,
             "dexterity": dexterity,
@@ -26,6 +27,8 @@ def get_player_data(data: str):
 def get_player_stat(stat: str):
     return player_data["stat"][stat]
 
+def load_player():
+    return player_data
 
 
 
