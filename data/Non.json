@@ -1,1 +1,19 @@
-{"name": "Non", "age": 10, "health": 100, "mana": 100, "stamina": 100, "race": "Human", "gender": "Male"}
+{
+    "name": "Non",
+    "age": 18,
+    "level": 18,
+    "health": 100,
+    "mana": 100,
+    "stamina": 100,
+    "race": "Human",
+    "gender": "Male",
+    "character_class": "Swordman",
+    "stats": {
+        "strength": 16,
+        "dexterity": 10,
+        "intelligence": 5,
+        "mind": 10,
+        "luck": 8,
+        "vitality": 12
+    }
+}

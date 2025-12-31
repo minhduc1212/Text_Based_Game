@@ -1,7 +1,10 @@
 import json
+from src.statistic import *
+from src.character_class import *
+
 
 class Character:
-    def __init__(self, name: str, age: int, level: int, health: int, mana: int, stamina: int, race: str, gender: str):
+    def __init__(self, name: str, age: int, level: int, health: int, mana: int, stamina: int, race: str, gender: str, character_class=None, stats = None):
         self.name = name
         self.age = age
         self.level = level
@@ -10,7 +13,12 @@ class Character:
         self.stamina = stamina
         self.race = race
         self.gender = gender
-    def create(self):
+        self.character_class = character_class
+        self.stats = stats 
+
+
+
+    def create(self, strength_point, dexterity_point, intelligence_point, mind_point, luck_point, vitality_point):
         data = {
             "name": self.name,
             "age": self.age,
@@ -19,8 +27,17 @@ class Character:
             "mana": self.mana,
             "stamina": self.stamina,
             "race": self.race,
-            "gender": self.gender
+            "gender": self.gender,
+            "character_class": self.character_class.name,
+            "stats": {
+                "strength": strength_point,
+                "dexterity": dexterity_point,
+                "intelligence": intelligence_point,
+                "mind": mind_point,
+                "luck": luck_point,
+                "vitality": vitality_point
+                }
         }
         with open(f"data/{self.name}.json", "w") as f:
-            json.dump(data, f)
+            json.dump(data, f, indent=4)
 
