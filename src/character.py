@@ -16,8 +16,6 @@ class Character:
         self.character_class = character_class
         self.stats = stats 
 
-
-
     def create(self, strength_point, dexterity_point, intelligence_point, mind_point, luck_point, vitality_point):
         data = {
             "name": self.name,
