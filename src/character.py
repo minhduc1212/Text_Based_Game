@@ -16,6 +16,19 @@ class Character:
         self.character_class = character_class
         self.stats = stats 
 
+
+    def create_stats(self, strength_point: int, dexterity_point: int, intelligence_point: int, mind_point: int, luck_point: int, vitality_point: int):
+        self.stats = {
+            "Strength": strength_point,
+            "Dexterity": dexterity_point,
+            "Intelligence": intelligence_point,
+            "Mind": mind_point,
+            "Luck": luck_point,
+            "Vitality": vitality_point
+        }
+        return self.stats
+    
+    
     def create(self, strength_point, dexterity_point, intelligence_point, mind_point, luck_point, vitality_point):
         data = {
             "name": self.name,
@@ -27,14 +40,7 @@ class Character:
             "race": self.race,
             "gender": self.gender,
             "character_class": self.character_class.name,
-            "stats": {
-                "strength": strength_point,
-                "dexterity": dexterity_point,
-                "intelligence": intelligence_point,
-                "mind": mind_point,
-                "luck": luck_point,
-                "vitality": vitality_point
-                }
+            "stats": self.create_stats(strength_point, dexterity_point, intelligence_point, mind_point, luck_point, vitality_point)          
         }
         with open(f"data/{self.name}.json", "w") as f:
             json.dump(data, f, indent=4)
