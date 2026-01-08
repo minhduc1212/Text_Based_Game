@@ -9,11 +9,11 @@
     "gender": "Male",
     "character_class": "Swordman",
     "stats": {
-        "strength": 19,
-        "dexterity": 10,
-        "intelligence": 5,
-        "mind": 10,
-        "luck": 8,
-        "vitality": 12
+        "Strength": 20,
+        "Dexterity": 10,
+        "Intelligence": 5,
+        "Mind": 10,
+        "Luck": 8,
+        "Vitality": 12
     }
 }

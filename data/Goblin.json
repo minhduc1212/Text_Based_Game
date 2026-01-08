@@ -1,0 +1,19 @@
+{
+    "name": "Goblin",
+    "age": 5,
+    "level": 1,
+    "health": 50,
+    "mana": 30,
+    "stamina": 40,
+    "race": "Goblin",
+    "gender": "Male",
+    "character_class": "Swordman",
+    "stats": {
+        "Strength": 1,
+        "Dexterity": 1,
+        "Intelligence": 1,
+        "Mind": 1,
+        "Luck": 1,
+        "Vitality": 1
+    }
+}
