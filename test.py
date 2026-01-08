@@ -2,8 +2,7 @@ from src.character import *
 from src.character_class import swordman
 from src.statistic import *
 
-def add_stat_points(stat, points):
-    #add points to class stats
+def init_add_stat_points(stat, points):
     print("You have 5 points to add to your class stats.")
     print("What stats do you want to add points to?")
     print("1. Strength")
@@ -43,7 +42,7 @@ else:
 
 total_points = 5
 while total_points > 0:
-    add_stat_points(player.character_class, 1)
+    init_add_stat_points(player.character_class, 1)
     total_points -= 1
     print(f"You have {total_points} points left.")
 
