@@ -2,7 +2,7 @@ from src.character import *
 from src.character_class import swordman
 from src.statistic import *
 from src.start import init_add_stat_points
-
+from src.combat import normal_attack
 
 player = Character("Non", 18, 18, 100, 100, 100, "Human", "Male")
 
@@ -33,8 +33,16 @@ vitality_point = player.character_class.vitality.point
 # Save character data
 player.create(strength_point, dexterity_point, intelligence_point, mind_point, luck_point, vitality_point)
 
-
 #create goblin enemy for test
 goblin = Character("Goblin", 5, 1, 50, 30, 40, "Goblin", "Male")
 goblin.character_class = swordman("Swordman", strength, dexterity, intelligence, mind, luck, vitality)
 goblin.create(1, 1, 1, 1, 1, 1)
+
+# Test attack
+print("Pls enter the number to attack the goblin:")
+print("1. Normal Attack")
+attack_choice = input("Enter the number of your choice: ")  
+if attack_choice == "1":
+    attack_move = normal_attack("Normal Attack", player.character_class.strength.point, goblin)
+    attack_move.start_attack()
+    print(f"Goblin's remaining health: {goblin.health}")    

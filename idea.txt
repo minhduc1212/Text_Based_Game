@@ -4,3 +4,4 @@ không cần chia class thành cá folder riêng mà chỉ cần tạo 1 file cl
 
 tao ra flow cua game de de lap trinh hon
 
+tat ca nhân vật khi tạo đều mặc định là level 18
