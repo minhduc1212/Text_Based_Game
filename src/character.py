@@ -1,4 +1,5 @@
 import json
+import os
 from src.statistic import *
 from src.character_class import *
 
@@ -27,7 +28,23 @@ class Character:
             "Vitality": vitality_point
         }
         return self.stats
-    
+    def save(self):
+        data = {
+            "name": self.name,
+            "age": self.age,
+            "level": self.level,
+            "health": self.health,
+            "mana": self.mana,
+            "stamina": self.stamina,
+            "race": self.race,
+            "gender": self.gender,
+            "character_class": self.character_class.name,
+            "stats": self.stats 
+        }  
+        if not os.path.exists("data"):
+            os.makedirs("data")
+        with open(f"data/{self.name}.json", "w", encoding='utf-8') as f:
+            json.dump(data, f, indent=4)
     
     def create(self, strength_point, dexterity_point, intelligence_point, mind_point, luck_point, vitality_point):
         data = {
@@ -42,6 +59,5 @@ class Character:
             "character_class": self.character_class.name,
             "stats": self.create_stats(strength_point, dexterity_point, intelligence_point, mind_point, luck_point, vitality_point)          
         }
-        with open(f"data/{self.name}.json", "w") as f:
-            json.dump(data, f, indent=4)
+        self.save()
 
