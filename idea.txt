@@ -5,3 +5,13 @@ không cần chia class thành cá folder riêng mà chỉ cần tạo 1 file cl
 tao ra flow cua game de de lap trinh hon
 
 tat ca nhân vật khi tạo đều mặc định là level 18
+
+trong story sẽ có các hành động(action) như 
+    walk, 
+    khám phá(tìm tòi), 
+    tương tác với đồ vật, người, npc
+        combat (đánh nhau)
+        điều tra đồ vật
+        nói chuyện với người    
+
+ket hop combat voi story

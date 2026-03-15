@@ -1,5 +1,4 @@
 def init_add_stat_points(player, stat, points):
-    print("You have 5 points to add to your class stats.")
     print("What stats do you want to add points to?")
     print("1. Strength")
     print("2. Dexterity")

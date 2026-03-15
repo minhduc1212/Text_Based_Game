@@ -1,14 +1,15 @@
 class StoryNode:
-    def __init__(self, node_id: str, text: str):
+    def __init__(self, node_id: str, text: str, action: str):
         self.node_id = node_id
         self.text = text
+        self.action = action
         # Dictionary mapping the choice description to the next node_id
         self.choices = {} 
 
     def add_choice(self, choice_text: str, next_node_id: str):
         self.choices[choice_text] = next_node_id
 
-class Story:
+class Story_Manager:
     def __init__(self):
         self.nodes = {}
         self.current_node_id = None
@@ -39,9 +40,9 @@ class Story:
             return True
         else:
             print("Invalid choice. Please try again.")
-            return False
+            return False 
             
-    def play(self):
+    def run(self):
         """A helper method to run the story loop in the console."""
         while self.current_node_id:
             node = self.get_current_node()
