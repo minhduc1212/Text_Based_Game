@@ -9,9 +9,11 @@ tat ca nhân vật khi tạo đều mặc định là level 18
 trong story sẽ có các hành động(action) như 
     walk, 
     khám phá(tìm tòi), 
-    tương tác với đồ vật, người, npc
+    tương tác với đồ vật, người, npc thì sẽ có các hành động như sau:
         combat (đánh nhau)
         điều tra đồ vật
         nói chuyện với người    
 
 ket hop combat voi story
+
+tao story phan nhanh
