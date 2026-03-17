@@ -3,8 +3,13 @@ from src.character_class import swordman
 from src.statistic import *
 from src.start import init_add_stat_points
 from src.combat import normal_attack
+from src.item import Bottle
+from src.inventory import Inventory
 
 player = Character("Non", 18, 18, 100, 100, 100, "Human", "Male")
+player.inventory = Inventory()
+inventory_item = Bottle("Empty Bottle", "Store liquid in it.", 1)
+player.inventory.add_item(inventory_item, 1)
 
 print("What class do you want to be?")
 print("1. Swordman")
