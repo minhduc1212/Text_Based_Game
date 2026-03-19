@@ -5,7 +5,7 @@ from src.character_class import *
 
 
 class Character:
-    def __init__(self, name: str, age: int, level: int, health: int, mana: int, stamina: int, race: str, gender: str, character_class=None, stats = None):
+    def __init__(self, name: str, age: int, level: int, health: int, mana: int, stamina: int, race: str, gender: str, character_class=None, stats = None, inventory=None):
         self.name = name
         self.age = age
         self.level = level
@@ -15,7 +15,8 @@ class Character:
         self.race = race
         self.gender = gender
         self.character_class = character_class
-        self.stats = stats 
+        self.stats = stats
+        self.inventory = inventory if inventory is not None else []
 
 
     def create_stats(self, strength_point: int, dexterity_point: int, intelligence_point: int, mind_point: int, luck_point: int, vitality_point: int):
@@ -28,6 +29,7 @@ class Character:
             "Vitality": vitality_point
         }
         return self.stats
+    
     def save(self):
         data = {
             "name": self.name,
@@ -39,7 +41,8 @@ class Character:
             "race": self.race,
             "gender": self.gender,
             "character_class": self.character_class.name,
-            "stats": self.stats 
+            "stats": self.stats,
+            "inventory": self.inventory.items if self.inventory else {}
         }  
         if not os.path.exists("data"):
             os.makedirs("data")
@@ -57,7 +60,9 @@ class Character:
             "race": self.race,
             "gender": self.gender,
             "character_class": self.character_class.name,
-            "stats": self.create_stats(strength_point, dexterity_point, intelligence_point, mind_point, luck_point, vitality_point)          
+            "stats": self.create_stats(strength_point, dexterity_point, intelligence_point, mind_point, luck_point, vitality_point),
+            "inventory": self.inventory,
+     
         }
         self.save()
 
