@@ -2,9 +2,9 @@ from src.character import *
 from src.character_class import swordman
 from src.statistic import *
 from src.start import init_add_stat_points
-from src.combat import normal_attack
 from src.item import Bottle
 from src.inventory import Inventory
+from src.skill import NormalAttack
 
 player = Character("Non", 18, 18, 100, 100, 100, "Human", "Male")
 player.inventory = Inventory()
@@ -48,6 +48,7 @@ print("Pls enter the number to attack the goblin:")
 print("1. Normal Attack")
 attack_choice = input("Enter the number of your choice: ")  
 if attack_choice == "1":
-    attack_move = normal_attack("Normal Attack", player.character_class.strength.point, goblin)
-    attack_move.start_attack()
-    print(f"Goblin's remaining health: {goblin.health}")    
+    attack_move = NormalAttack("Normal Attack", player.character_class.strength.point, goblin)
+    attack_move.start_attack()      
+    print(f"Goblin's remaining health: {goblin.health}")
+       
